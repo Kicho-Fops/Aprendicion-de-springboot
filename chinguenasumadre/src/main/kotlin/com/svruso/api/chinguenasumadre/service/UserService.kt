@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service
 class UserService(private val dataSource: UserDataSource) {
 
     fun getUsers(): Collection<User> = dataSource.retrieveUsers()
+    fun getUser(userName: String): User = dataSource.retrieveUser(userName)
 
 
 }

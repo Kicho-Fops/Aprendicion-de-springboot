@@ -23,6 +23,8 @@ class MockUserDataSource: UserDataSource {
         )
 
     override fun retrieveUsers(): Collection<User> = users // Esto basicamente signifa return users
+    override fun retrieveUser(userName: String): User =  users.first { it.name == userName } // Arroja un NoSuchElement si no existe el elemento
+
 
 
 }
