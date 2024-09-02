@@ -18,6 +18,9 @@ class UserService(private val dataSource: UserDataSource) {
 
     fun getUsers(): Collection<User> = dataSource.retrieveUsers()
     fun getUser(userName: String): User = dataSource.retrieveUser(userName)
+    fun addUser(user: User): User = dataSource.createUser(user)
+    fun updateUser(user: User): User = dataSource.updateUser(user)
+    fun deleteUser(userName: String): User = dataSource.deleteUser(userName)
 
 
 }
